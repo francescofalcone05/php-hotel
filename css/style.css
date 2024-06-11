@@ -1,0 +1,9 @@
+body {
+    background-color: #222;
+    color: white;
+}
+
+.container {
+    width: 75%;
+    margin: 0 auto;
+}
