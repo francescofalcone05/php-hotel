@@ -6,36 +6,45 @@ $hotels = [
         'description' => 'Hotel Belvedere Descrizione',
         'parking' => true,
         'vote' => 4,
-        'distance_to_center' => 10.4
+        'distance_to_center' => '0.4 Km'
     ],
     [
         'name' => 'Hotel Futuro',
         'description' => 'Hotel Futuro Descrizione',
         'parking' => true,
         'vote' => 2,
-        'distance_to_center' => 2
+        'distance_to_center' => '2 Km'
     ],
     [
         'name' => 'Hotel Rivamare',
         'description' => 'Hotel Rivamare Descrizione',
         'parking' => false,
         'vote' => 1,
-        'distance_to_center' => 1
+        'distance_to_center' => '1 Km'
     ],
     [
         'name' => 'Hotel Bellavista',
         'description' => 'Hotel Bellavista Descrizione',
         'parking' => false,
         'vote' => 5,
-        'distance_to_center' => 5.5
+        'distance_to_center' => '5.5 Km'
     ],
     [
         'name' => 'Hotel Milano',
         'description' => 'Hotel Milano Descrizione',
         'parking' => true,
         'vote' => 2,
-        'distance_to_center' => 50
+        'distance_to_center' => '50 Km'
     ],
+
+    //  $a = 0
+    // while ($a <= count($hotels)) {
+    //  if ($hotels[$a][2] == 'false'){
+    //     $hotels[$a][2] = 'si' ;
+    //     };
+    //  $a++
+
+    // };
 
 ];
 
@@ -57,18 +66,24 @@ $hotels = [
 
         <h1>Hotels</h1>
 
-        <ul>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Parking</th>
+                <th>Vote</th>
+                <th>Distance to center</th>
+            </tr>
 
-            <?php
-            foreach ($hotels as $hotel) {
-                foreach ($hotel as $key => $value) {
-                    echo "<li>" . $key . ':' . $value . "</li>";
-                }
-            }
-            ?>
+            <?php foreach ($hotels as $hotel) { ?>
+                <tr>
+                    <?php foreach ($hotel as $key => $value) {  ?>
+                        <td> <?= $value ?> </td>
+                    <?php } ?>
+                </tr>
+            <?php } ?>
 
-        </ul>
-
+        </table>
 
     </div>
 

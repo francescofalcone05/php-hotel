@@ -6,4 +6,18 @@ body {
 .container {
     width: 75%;
     margin: 0 auto;
+    text-align: center;
+    overflow: auto;
+}
+
+table {
+    border: white 1px solid;
+    width: 100%;
+}
+
+table>tr,
+table th,
+table td {
+    border: white 1px solid;
+    padding: 0.5rem;
 }
